@@ -1,0 +1,33 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(0);
+	cin.tie(0);
+  float h,u,d,f;
+  while(scanf("%d%d%d%d",&h,&u,&d,&f))
+  {
+      if(h==0) break;
+ //cin>>h>>u>>d>>f;
+      long long nd=1;
+      float g=0;
+     float t=(f/100)*u;
+      while(g<h&&g>=0)
+      {
+          g+=u;
+          if(u>0)
+            u-=t;
+          if(g>h) break;
+          g-=d;
+          if(g<0)
+            break;
+
+          nd++;
+      }
+      if(g>0)
+cout<<"success on day "<<nd<<endl;
+else cout<<"failure on day "<<nd<<endl;
+  }
+return 0;
+}
