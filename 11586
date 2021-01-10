@@ -1,0 +1,28 @@
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+int n;
+cin>>n;
+cin.ignore();                 //if i dont put it , the loop will decrease by one 
+for(int j=0;j<n;j++)
+{
+    int c=0;
+    string name;
+getline(cin,name);          // focus that i used getline not cin as a result of seperated spaces 
+for(auto &i:name)
+{
+if(i=='F') c++;
+else if(i=='M') c--;
+}
+// for (string::iterator it = temp.begin(); it != temp.end(); ++it)
+if(c==0&&name.size()>3) cout<<"LOOP"<<endl;             // focus that name.size()>3 is invalid case
+else cout<<"NO LOOP"<<endl;
+}
+return 0;
+}
