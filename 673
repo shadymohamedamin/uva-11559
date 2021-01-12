@@ -1,0 +1,83 @@
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+using namespace std;
+//long long int s=0;
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+
+int main()
+{
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+
+//int n;
+//cin>>n;
+char temp[200];
+cin.getline(temp,200);
+int n=atoi(temp);
+while(n--)
+{
+    string name;
+    //cin>>name;
+   getline(cin,name,'\n');
+//   cin.ignore(name);
+    stack<char>ss;
+  /* if(name.size()==0)
+   {
+        cout<<"Yes"<<endl;
+        continue;
+   }*/
+   int f=0;
+   for(int i=0;i<name.size();i++)
+   {
+       if(name[i]=='('||name[i]=='[')
+            ss.push(name[i]);
+       else if(name[i]==')'||name[i]==']')
+       {
+           if(ss.empty())
+           {
+               f=1;
+               break;
+           }
+           else if(name[i]==')')
+           {
+               if(ss.top()=='(')
+                ss.pop();
+               else
+               {
+                   f=1;
+                   break;
+               }
+           }
+           else if(name[i]==']')
+            {
+               if(ss.top()=='[')
+                    ss.pop();
+               else {
+                f=1;
+                break;
+               }
+            }
+           /* else
+            {
+                f=1;
+                break;
+            }*/
+          }
+   }
+   if(!ss.empty()||f==1)
+    cout<<"No\n";
+   else cout<<"Yes\n";
+}
+return 0;
+}
