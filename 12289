@@ -1,0 +1,52 @@
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+using namespace std;
+//long long int s=0;
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+
+int main()
+{
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+long long n;
+cin>>n;
+while(n--)
+{
+string name;
+cin>>name;
+if(name.size()>3)
+    cout<<3<<endl;
+else
+{
+if(name[0]=='o'&&name[1]=='n'&&name[2]=='e')
+    cout<<1<<endl;
+else if(name[0]=='o'&&name[1]=='n')
+    cout<<1<<endl;
+else if(name[1]=='n'&&name[2]=='e')
+    cout<<1<<endl;
+    else if(name[0]=='o'&&name[2]=='e')
+    cout<<1<<endl;
+else if(name[0]=='t'&&name[1]=='w'&&name[2]=='o')
+    cout<<2<<endl;
+else if(name[0]=='t'&&name[1]=='w')
+    cout<<2<<endl;
+else if(name[0]=='t'&&name[2]=='o')
+    cout<<2<<endl;
+    else if(name[1]=='w'&&name[2]=='o')
+    cout<<2<<endl;
+}
+}
+return 0;
+}
