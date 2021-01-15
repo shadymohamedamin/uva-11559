@@ -1,0 +1,76 @@
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+//long long int s=0;
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+bool palindrome(string s)
+{
+    string temp=s;
+    reverse(s.begin(),s.end());
+    if(s==temp) return true;
+    else return false;
+}
+typedef long long ll;
+bool prime(ll n)
+{
+    if(n==2||n==3) return true;
+    if(n<2) return false;
+    if(n%2==0||n%3==0) return false;
+    for(ll i=3;i*i<=n;i+=2)
+        if(n%i==0)
+            return false;
+    return true;
+}
+int main()
+{
+ int n,k;
+ while(cin>>n>>k)
+ {
+     cin.ignore();
+    if(n==0&&k==0)
+    break;
+
+ int arr[k];
+ for(int i=0;i<k;i++)
+        cin>>arr[i];
+ int c=0;
+ if(n>arr[0])          //the hint
+    c=n-arr[0];
+ for(int i=0;i<k-1;i++)
+ {
+     if(arr[i]>arr[i+1])
+        c+=arr[i]-arr[i+1];
+ }
+ cout<<c<<endl;
+}
+ return 0;
+}
