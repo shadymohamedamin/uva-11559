@@ -1,0 +1,83 @@
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+bool palindrome(string s)
+{
+    string temp=s;
+    reverse(s.begin(),s.end());
+    if(s==temp) return true;
+    else return false;
+}
+int main()
+{
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+int n;
+cin>>n;
+vector<pair<int,int> >p(n);
+map<pair<int,int> ,int>mp;
+map<int,int>mp1,mp2;
+for(int i=0;i<n;i++)
+{
+ cin>>p[i].first>>p[i].second;
+    mp1[p[i].first]++;
+    mp2[p[i].second]++;
+    mp[p[i]]++;                          
+}
+long long int s=0;
+for(int i=0;i<n;i++)
+    s+=mp1[p[i].first]+mp2[p[i].second]-(mp[p[i]]-1)-2;
+    
+    
+    //another solution with combination           the rule is n*(n-1)/2
+    
+    
+    /*ll ans=0;
+    for(auto v:freqx)
+        ans+=1LL*v.x*(v.x-1)/2;
+    for(auto v:freqy)
+        ans+=1LL*v.x*(v.x-1)/2;
+    for(auto v:freq)
+        ans-=1LL*v.x*(v.x-1)/2;
+    cout<<ans;*/
+    
+    
+    
+    
+    
+cout<<s/2;
+
+
+
+return 0;
+}
