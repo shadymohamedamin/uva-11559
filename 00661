@@ -1,3 +1,13 @@
+on   on  off  on   off  off
+5    2   5    7    2    7
+mx=5+2  
+mx=2+7
+
+
+
+
+
+
 #include <iostream>
 
 using namespace std;
@@ -29,3 +39,120 @@ main() {
         cout << endl << endl;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+//long long int s=0;
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+bool palindrome(string s)
+{
+    string temp=s;
+    reverse(s.begin(),s.end());
+    if(s==temp) return true;
+    else return false;
+}
+typedef long long ll;
+bool prime(ll n)
+{
+    if(n==2||n==3) return true;
+    if(n<2) return false;
+    if(n%2==0||n%3==0) return false;
+    for(ll i=3;i*i<=n;i+=2)
+        if(n%i==0)
+            return false;
+    return true;
+}
+int main()
+{
+ll n,m,c,t=0;
+bool safe =true;
+while(cin>>n>>m>>c)
+{
+    if(n==0&&m==0&&c==0) break;
+int arr[n];
+vector<bool>visit(m,false);
+ //visit[k-1]=!visit[k-1];
+for(ll i=1;i<=n;i++)
+    cin>>arr[i];
+    ll s=0,mx=0;
+
+for(ll i=1;i<=m;i++)
+{
+    ll k;
+    cin>>k;
+    visit[k-1]=!visit[k-1];
+    bool safe=true;
+    if(visit[k-1])
+    {
+    s+=arr[k-1];
+    mx=max(mx,s);
+   if(s>c)
+   {
+       safe=false;
+    //   break;
+   }
+    }
+    else
+       s-=arr[k-1];
+}
+  printf("Sequence %d\n",++t);
+        if (!safe) printf("Fuse was not blown.\nMaximal power consumption was %ld amperes.",mx);
+        else printf("Fuse was blown.");
+        cout << endl << endl;
+}
+//cout<<mx;
+//int n;
+//cin>>n;
+//int c=0;
+//for(int i=1;i<=n;i++)
+//    if(prime(i)) c++;
+//    cout<<c;
+return 0;
+}
+
+
+
