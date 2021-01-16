@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define sz 10000001
+vector<bool>isprime(sz,true);
+vector<long long>vp,vf;
+inline void prime_()
+{
+    isprime[0]=isprime[1]=0;
+    for(ll i=2;i*i<=sz;i++)
+    {
+        if(isprime[i])
+        {
+         vp.push_back(i);
+        for(ll j=i*2;j<=sz;j+=i)
+        {
+            isprime[j]=0;
+        }
+        }
+    }
+}
+int main()
+{
+ll n;
+while(cin>>n)
+{
+if(n==0) break;
+if(n<8)
+{
+    cout<<"Impossible."<<endl;
+    continue;
+}
+prime_();
+ll g=0,a=0,b=0;
+if(n%2==0)
+{
+g=n-4;
+a=2,b=2;
+}
+else
+{
+g=n-5;
+a=2,b=3;
+}
+int f=0;
+for(ll i=2;i<g;i++)
+{
+    if(isprime[i]&&isprime[g-i])
+    {
+        cout<<a<<" "<<b<<" "<<i<<" "<<g-i<<endl;
+        f=1;
+        break;
+    }
+}
+if(f==0) cout<<"Impossible."<<endl;
+}
+return 0;
+}
