@@ -1,0 +1,55 @@
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+int main()
+{
+ll n,m;
+while(~scanf("%lld%lld",&n,&m))
+{
+  //  if(n==0&&m==0) break;
+ll arr[m];
+for(ll i=0;i<m;i++)
+cin>>arr[i];
+ll s=0;
+for(ll i=1;i<(1<<m);i++)
+{
+    ll r=1,bits=0;
+    for(ll j=0;j<m;j++)    //focus j<m not j<i
+    {
+        if(i&(1<<j))
+        {
+            bits++;
+            r=lcm(r,arr[j]);
+        }
+        if(r>n) break;
+    }
+    if(bits&1) s+=n/r;     the intersect part 
+        else s-=n/r;
+}
+cout<<n-s<<endl;
+}
+return 0;
+}
+
+
+
+
+
+
