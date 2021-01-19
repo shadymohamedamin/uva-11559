@@ -1,0 +1,83 @@
+//lcm for set of numbers
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+
+typedef long long ll;
+
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define sz 10000001
+
+ll findlcm(ll arr[], ll n)
+{
+    // Initialize result
+    ll ans = arr[0];
+
+    // ans contains LCM of arr[0], ..arr[i]
+    // after i'th iteration,
+    for (ll i = 1; i < n; i++)
+        ans = (((arr[i] * ans)) /
+                (gcd(arr[i], ans)));
+
+    return ans;
+}
+ll findGCD(ll arr[], ll n)
+{
+    ll result = arr[0];
+    for (ll i = 1; i < n; i++)
+    {
+        result = gcd(arr[i], result);
+
+        if(result == 1)
+        {
+           return 1;
+        }
+    }
+    return result;
+}
+
+int main()
+{
+ll n,t;
+while(1)
+{
+    cin>>n>>t;
+    if(n==0&&t==0)
+    {
+        break;
+    }
+    ll arr[n];
+    for(ll i=0;i<n;i++)
+        cin>>arr[i];
+ll th;
+while(t--)
+{
+  cin>>th;
+ll e=findlcm(arr,n);
+if(th%e==0) cout<<th<<" "<<th<<endl;
+else cout<<(th/e)*e<<" "<<((th/e)+1)*e<<endl;
+}
+}
+return 0;
+}
