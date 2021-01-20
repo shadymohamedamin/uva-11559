@@ -68,4 +68,6 @@ inline ll exp(ll b, ll p, ll m) {
    // isalpha()      to check if this alpha or not
    
    
+   for(int i=l;i>0&&s>0;i--)
+    cout<<(i&-i)<<" "<<(i&i)<<endl;
    
