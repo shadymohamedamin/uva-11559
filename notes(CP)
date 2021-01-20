@@ -23,4 +23,10 @@ ll fast_pow(ll a,ll b,ll M)
 
 
 
-
+ll calculatePower(ll base, ll powerRaised)
+{
+    if (powerRaised != 0)
+        return (base*calculatePower(base, powerRaised-1));
+    else
+        return 1;
+}
