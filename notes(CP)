@@ -62,12 +62,37 @@ inline ll exp(ll b, ll p, ll m) {
 
 
 
+
+
    //     string name=to_string(x);  //from int to string
     //    long long y=stoll(name);   //from string to int
    // tolower  //to lower case of char
    // isalpha()      to check if this alpha or not
    
    
+   
+   
+   
+   
+   
    for(int i=l;i>0&&s>0;i--)
     cout<<(i&-i)<<" "<<(i&i)<<endl;
    
+   
+   
+   
+   
+   
+   
+/*string from_d_to_binary(ll n)
+{
+    string name="";
+    while(n>0)
+    {
+        string h=to_string(n%2);
+        name+=h;
+        n/=2;
+    }
+    reverse(name.begin(),name.end());
+    return name;
+}*/
