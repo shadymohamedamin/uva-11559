@@ -30,3 +30,36 @@ ll calculatePower(ll base, ll powerRaised)
     else
         return 1;
 }
+
+
+/*ll calculatePower(ll base, ll powerRaised)
+{
+    if (powerRaised != 0)
+        return (base*calculatePower(base, powerRaised-1));
+    else
+        return 1;
+}*/
+inline ll exp(ll b, ll p, ll m) {
+	ll r=1;
+	while(p) {
+		if(p&1)
+			r=(__int128)r*b%m;
+		b=(__int128)b*b%m;
+		p/=2;
+	}
+	return r;
+}
+/*ll power(__int128 a,__int128 b,ll m){
+    __int128 result = 1;
+    while(b>0){
+        if(b%2==1){
+            result = (result*a)%m;b--;
+        }
+        a = (a*a)%m;b/=2;
+    }
+    return result;
+}*/
+
+
+
+
