@@ -104,4 +104,5 @@ inline ll exp(ll b, ll p, ll m) {
  
  
  
- 
+ static bool     _foo = ios::sync_with_stdio(false);              leetcode
+static ostream* _bar = cin.tie(NULL);
