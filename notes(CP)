@@ -96,3 +96,12 @@ inline ll exp(ll b, ll p, ll m) {
     reverse(name.begin(),name.end());
     return name;
 }*/
+
+
+
+
+ //nums.erase( unique( nums.begin(), nums.end() ), nums.end() );   
+ 
+ 
+ 
+ 
