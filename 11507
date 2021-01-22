@@ -1,0 +1,54 @@
+
+
+#include <iostream>
+#include<cstdio>
+#include<bits/stdc++.h>
+#include<numeric>
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+long long n;
+map<string,map<string,string> >bends;
+string name,last;
+  bends["+x"]["+y"] = "+y";
+    bends["+x"]["-y"] = "-y";
+    bends["+x"]["+z"] = "+z";
+    bends["+x"]["-z"] = "-z";
+    bends["-x"]["+y"] = "-y";
+    bends["-x"]["-y"] = "+y";
+    bends["-x"]["+z"] = "-z";
+    bends["-x"]["-z"] = "+z";
+    bends["+y"]["+y"] = "-x";
+    bends["+y"]["-y"] = "+x";
+    bends["+y"]["+z"] = "+y";
+    bends["+y"]["-z"] = "+y";
+    bends["-y"]["+y"] = "+x";
+    bends["-y"]["-y"] = "-x";
+    bends["-y"]["+z"] = "-y";
+    bends["-y"]["-z"] = "-y";
+    bends["+z"]["+y"] = "+z";
+    bends["+z"]["-y"] = "+z";
+    bends["+z"]["+z"] = "-x";
+    bends["+z"]["-z"] = "+x";
+    bends["-z"]["+y"] = "-z";
+    bends["-z"]["-y"] = "-z";
+    bends["-z"]["+z"] = "+x";
+    bends["-z"]["-z"] = "-x";
+while(1)
+{
+    cin>>n;
+if(n==0) break;
+last="+x";
+for(long long i=0;i<n-1;i++)
+{
+    cin>>name;
+    if(name!="No")
+   last=bends[last][name];
+}
+cout<<last<<endl;
+}
+    return 0;
+}
