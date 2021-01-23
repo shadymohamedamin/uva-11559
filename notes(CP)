@@ -166,3 +166,307 @@ map<string,map<string,string> >bends;
         }
 
 
+
+
+
+
+//for (string::iterator it = temp.begin(); it != temp.end(); ++it)
+//ios_base::sync_with_stdio(0);
+//cin.tie(0);
+//cin.ignore();
+
+//custom sort
+/*bool cmp(int s,int f)   //if we replace f with s , the program will print 5 3 1    4 2
+{
+        if(f%2==1&&s%2==0)
+        return true;
+        if(f%2==0&&s%2==1)
+        return false;
+        if(f%2==0&&s%2==0&&f<s)
+        return true;
+        if(f%2==1&&s%2==1&&f<s)
+        return true;
+         if(f%2==0&&s%2==1&&f>s)
+        return false;
+}
+sort(v.begin(),v.end(),cmp);*/
+
+
+//while(getline(cin,name)&&name!="")
+ //   int l=name.find(' ');
+//    temp1=name.substr(0,l);
+ //   temp2=name.substr(l+1,name.size()-1);
+
+
+
+
+ /* if(isalpha(name[i]))
+            if(isupper(name[i]))
+            {
+                temp2+=name[i]+32;
+            }
+           else
+        temp2+=name[i];*/
+         // temp2+=tolower(name[i]);
+
+
+//name.size() if differ from name.length()
+
+
+
+/*int n;
+cin>>n;
+map<int,int>mp1,mp2;
+map<pair<int,int>,int>mp;
+long long s=0;
+for(int i=0;i<n;i++)
+{
+        int x,y;
+        cin>>x>>y;
+        mp1[x]++;mp2[y]++;mp[{x,y}]++;
+        s+=mp1[x]+mp2[y]-(mp[{x,y}]-1)-2;
+}*/
+/*long long s=0;
+for(auto &i:mp1)
+    s+=1LL*i.second*(i.second-1)/2;
+for(auto &i:mp2)
+    s+=1LL*i.second*(i.second-1)/2;
+for(auto &i:mp)
+    s-=1LL*i.second*(i.second-1)/2;*/
+//cout<<s;
+
+
+
+//iota(f,f+n,0);
+
+
+
+//vector<bool>visit(m,false);
+ //visit[k-1]=!visit[k-1];          //switch on and off
+
+
+
+/* inline ll is(ll b)
+{
+  for(ll i=2;i*i<=b;i++)
+    while(b%(i*i)==0)
+    b/=i;
+return b;
+}*/
+
+
+
+
+//bitset
+//bit_and
+//bit_or
+//bit_xor
+//multimap
+
+
+//while(~scanf("%lld%lld",&n,&m))
+
+
+ /*for(ll i=1;i<(1<<n);i++)   //bit masks
+ {
+     ll bits=0;
+     for(ll j=0;j<m;j++)
+     {
+         if(i&(1<<j))
+         {
+             bits++;*/
+
+
+
+
+/*vector<int> help(const vector<int>&v,int n)
+int main()
+{
+      vector<int>v;
+    vector<int>nm;
+    nm=help(v,n);
+}*/
+
+
+
+//int cb = count(s.begin(), s.end(), 'B');
+
+
+
+
+
+
+
+long long int r(long long int x)
+{
+    long long int s=0,d=0;
+    while(x>0)
+    {
+        d=x%10;
+        s+=d;
+        x/=10;
+    }
+    return s/10==0?s:r(s);
+}
+
+
+
+
+
+
+
+long long gcd(long long int a, long long int b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+
+
+
+
+
+
+
+
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+
+
+
+
+
+
+
+
+bool palindrome(string s)
+{
+    string temp=s;
+    reverse(s.begin(),s.end());
+    if(s==temp) return true;
+    else return false;
+}
+
+
+
+
+
+
+
+
+typedef long long ll;
+bool prime(ll n)
+{
+    if(n==2||n==3) return true;
+    if(n<2) return false;
+    if(n%2==0||n%3==0) return false;
+    for(ll i=3;i*i<=n;i+=2)
+        if(n%i==0)
+            return false;
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+/*int count_prime_in_range(int n)
+{
+    int c=0;
+    vector<bool>isprime(n+1,true);
+    isprime[0]=isprime[1]=0;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(isprime[i])
+        for(int j=i*2;j<=n;j+=i)
+        isprime[j]=0;
+    }
+    for(int i=0;i<n.size();i++)
+        if(isprime[i])
+        c++;
+    return c;
+}*/
+
+
+
+
+
+
+
+
+
+ll findlcm(ll arr[], ll n)
+{
+    // Initialize result
+    ll ans = arr[0];
+
+    // ans contains LCM of arr[0], ..arr[i]
+    // after i'th iteration,
+    for (ll i = 1; i < n; i++)
+        ans = (((arr[i] * ans)) /
+                (gcd(arr[i], ans)));
+
+    return ans;
+}
+
+
+
+
+
+
+
+
+ll findGCD(ll arr[], ll n)
+{
+    ll result = arr[0];
+    for (ll i = 1; i < n; i++)
+    {
+        result = gcd(arr[i], result);
+
+        if(result == 1)
+        {
+           return 1;
+        }
+    }
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
