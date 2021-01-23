@@ -156,7 +156,13 @@ map<string,map<string,string> >bends;
 
 
 
-
-
+//sort array
+ int i=0;
+    while(i<v.size()){
+            if(v[i]!=v[v[i]-1])
+                swap(v[i],v[v[i]-1]);
+            else
+                i++;
+        }
 
 
