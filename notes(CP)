@@ -444,12 +444,23 @@ ll findGCD(ll arr[], ll n)
 
 
 
+/*
 
+namespace faculty
+{
+    void shady()
+    {
+        cout<<"shady is an engineer in faculty of engineering";
+    }
+}
+using namespace faculty;
+int main()
+{
+    shady();
+return 0;
+}
 
-
-
-
-
+*/
 
 
 
