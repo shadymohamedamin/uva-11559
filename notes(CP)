@@ -508,6 +508,6 @@ Output
 [1,3,12,0,0]
 
 
-
+//std::rotate(v.begin(),v.begin()+k,v.end());
 
 
