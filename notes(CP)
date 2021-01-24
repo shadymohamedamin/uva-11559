@@ -475,9 +475,19 @@ return 0;
 
 
 
+//intersect of two ectors
 
-
-
+        sort(v1.begin(),v1.end());
+        sort(v2.begin(),v2.end());
+        set_intersection(v1.cbegin(),v1.cend(),v2.cbegin(),v2.cend(),back_inserter(n));
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
