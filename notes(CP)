@@ -576,3 +576,35 @@ lu big_mod(lu base, lu power, lu mod)
 
 
 
+
+
+
+
+
+
+
+ // k mod x=y
+    cout<<((n-y)/x)*x+y<<endl;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
