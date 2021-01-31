@@ -608,4 +608,58 @@ lu big_mod(lu base, lu power, lu mod)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    vector<int>v;
+  vector<vector<int>> permute(vector<int>& nums) {
+      //  vector<int>v;
+        vector<vector<int> >w;
+        v=nums;
+        w.push_back(v);
+        next_permutation(v.begin(),v.end());
+        while(v!=nums)
+        {
+            w.push_back(v);
+            next_permutation(v.begin(),v.end());
+        }
+        return w;
+    }
+void get_permutation()
+{
+    int n;
+    cin>>n;
+      vector<int>v(n);//={1,2,3};
+    for(int i=0;i<n;i++)
+        cin>>v[i];
+         vector<vector<int> >perm=permute(v);
+    for(int i=0;i<perm.size();i++)
+    {
+        for(int j=0;j<perm[i].size();j++)
+        {
+            cout<<perm[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+
+
+
+
+
+
 
