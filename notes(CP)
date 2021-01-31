@@ -601,8 +601,9 @@ lu big_mod(lu base, lu power, lu mod)
     
     
     
-    
-    
+    //o(2 power n)
+    int fibo(int n){if(n<=1)return 1;else return fibo(n-1)+fibo(n-1);}
+    the number of nodes is equal 2 power the level
     
     
     
