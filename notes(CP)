@@ -750,6 +750,37 @@ sort(arr.rbegin()+a+1,arr.rend());*/
 convert from decemil to any base system 
 also take       % and /
 example 
-if i want to 
+if i want to convert 2 to binary
+2%2==0
+2/2==1
+the binary is 10
+
+
+
+
+
+
+if i want to convert binary to hexadecemil
+1011110101101010010                         
+i take every 4 consecutive digits from left and convert them to number like 
+0010=====2
+0101=====5
+1011=====B
+1110=====E
+101 =====5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
