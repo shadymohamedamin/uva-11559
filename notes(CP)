@@ -784,3 +784,27 @@ i take every 4 consecutive digits from left and convert them to number like
 
 
 
+string letters="0123456789ABCDEF";
+int to_int(char c){return letters.find(c);}
+int fromanybasetodecimal(string n,int base)
+{
+    int res=1;
+    for(int i=0;i<n.size();i++){res*=base,res+=to_int(n[i]);}
+    return res;
+}
+string fromdecemiltoanybase(int n,int base)
+{
+    if(n==0) return "0";
+    string res="";
+    for(;n;n/=base) res+=letters[n%base];
+    return res;
+}
+
+
+
+
+
+
+
+
+
