@@ -715,7 +715,12 @@ vector<vector<int>> ans;
 
 
 
-
+bool isInt( double d )
+{
+    double dummy;
+    return modf( d, &dummy ) == 0.0;
+}
+  
 
 
 
