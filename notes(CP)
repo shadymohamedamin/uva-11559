@@ -806,5 +806,7 @@ string fromdecemiltoanybase(int n,int base)
 
 
 
+aX^b= a*b*X(b-1) 
+ (3x^2-6X-24) = 3*2*X - 6 = 6X-6
 
 
