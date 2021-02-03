@@ -1,3 +1,14 @@
+   name[j]=' ';
+    if(!isspace(name[i]))
+    temp+=name[i];
+    
+    
+    
+    
+    
+
+
+
 string to_string(int num)
 {
     stringstream ss;
