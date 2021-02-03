@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long unsigned n;
+    while(cin>>n&&n)
+    {
+        long long unsigned s=0;
+        for(long long unsigned i=1;i<=n;i++)
+        {
+            s+=i*i*i;
+        }
+        cout<<s<<endl;
+    }
+    //cout<<"Hello World";
+
+    return 0;
+}
