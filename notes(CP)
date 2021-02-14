@@ -1,3 +1,49 @@
+  to sort range in vector
+    long long s1,s2;
+            cin>>s1>>s2;
+            s1--;
+            s2--;
+   
+       std::partial_sort(v.begin()+s1,v.begin()+s2,v.end());
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  to reverse range in vector
+  
+  
+  
+  
+               long long l,r;
+        cin>>l>>r;
+        l--;
+        r--;
+        while(l<r)
+        {
+            swap(v[l],v[r]);
+            l++;
+            r--;
+        }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    name[j]=' ';
     if(!isspace(name[i]))
     temp+=name[i];
