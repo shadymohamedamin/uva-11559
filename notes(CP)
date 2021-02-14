@@ -1,3 +1,49 @@
+  /* Function to check if x is power of 2*/
+bool isPowerOfTwo (int x) 
+{ 
+  /* First x in the below expression is  
+    for the case when x is 0 */
+  return x && (!(x&(x-1))); 
+} 
+
+
+
+
+
+
+
+// C++ code to demonstrate working of  
+// "binary" numbers 
+#include<iostream> 
+using namespace std; 
+int main() 
+{ 
+    auto number = 0b011;  //3
+    cout << number; 
+    return 0; 
+} 
+
+
+
+
+
+
+
+
+// A quick way to swap a and b 
+a ^= b; 
+b ^= a; 
+a ^= b;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   to sort range in vector
     long long s1,s2;
             cin>>s1>>s2;
