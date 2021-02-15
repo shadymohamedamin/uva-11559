@@ -1,3 +1,11 @@
+dequeue
+//int value = d.at(index);    // index
+
+
+
+
+
+
 //v.insert(v.begin() + index, value); 
 
 
