@@ -35,9 +35,9 @@ Similarly, kth bit flips after every 2^k number.
 /* Function to check if x is power of 2*/
 bool isPowerOfTwo (int x) 
 { 
-  /* First x in the below expression is  
+  /* First x in the below expression is       
     for the case when x is 0 */
-  return x && (!(x&(x-1))); 
+  return x && (!(x&(x-1)));                //consider 16 : 10000 (16-1) = 15 : 01111 
 } 
 
 
