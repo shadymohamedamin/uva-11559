@@ -1,4 +1,38 @@
-  /* Function to check if x is power of 2*/
+0 => 0000
+1 => 0001
+2 => 0010
+3 => 0011
+4 => 0100
+5 => 0101
+6 => 0110
+7 => 0111
+8 => 1000
+9 => 1001
+
+We can clearly see that,
+0th bit flips after every 1 number.
+1th bit flips after every 2 number.
+2nd bit flips after every 4 number.
+Similarly, kth bit flips after every 2^k number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Function to check if x is power of 2*/
 bool isPowerOfTwo (int x) 
 { 
   /* First x in the below expression is  
