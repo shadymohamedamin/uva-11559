@@ -1,3 +1,14 @@
+ #include <stdlib.h> 
+#include <time.h> 
+ srand(time(0)); 
+num = (rand() % (upper – lower + 1)) + lower
+
+
+
+
+
+
+
 list
 int value = std::next(l.begin(), index);		        // index
 // Splice: Transfer elements from list to list
