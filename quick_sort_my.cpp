@@ -67,6 +67,8 @@ ll partition(vector<ll>&arr,ll l,ll r)
 
 void quick(vector<ll>&arr,ll l,ll r)
 {
+ //int k = l + rand() % (r - l + 1);
+  //swap(a[l], a[k]);
     if(l<r)
     {
         ll index=partition(arr,l,r);
