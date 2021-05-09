@@ -42,6 +42,22 @@ int main()
 
 
 
+/*int partition(int *a, int l, int r)
+{
+    int i,j,pindex,pivot;
+    pindex = l;
+  //  pivot = a[r];
+    for(i=l;i<r;i++)
+    {
+        if(a[i] <=a[r]) //pivot)
+        {
+            swap(a[pindex], a[i]);
+            pindex++;
+        }
+    }
+    swap(a[pindex], a[r]);
+    return pindex;
+}*/
 
 
 /*#include <iostream>
