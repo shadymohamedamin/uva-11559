@@ -314,7 +314,7 @@ bool isPowerOfTwo (int x)
   return x && (!(x&(x-1)));                //consider 16 : 10000 (16-1) = 15 : 01111 
 } 
 
-
+//https://codeforces.com/group/u3Ii79X3NY/contest/272220/my
     for(ll j=0;j<31;j++)
         {
          p=1;
