@@ -315,6 +315,14 @@ bool isPowerOfTwo (int x)
 } 
 
 
+    for(ll j=0;j<31;j++)
+        {
+         p=1;
+         p=1<<j;
+         cout<<p<<" ";
+         //1 2 4 8 16 32 64 128 256 512 1024
+        }
+
 
 
 
