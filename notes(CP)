@@ -1,3 +1,89 @@
+
+// CPP Program to generate random alphabets
+/*#include <bits/stdc++.h>
+using namespace std;
+ 
+const int MAX = 26;
+ 
+// Returns a string of random alphabets of
+// length n.
+string printRandomString(int n)
+{
+    char alphabet[MAX] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g',
+                          'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                          'o', 'p', 'q', 'r', 's', 't', 'u',
+                          'v', 'w', 'x', 'y', 'z' };
+ 
+    string res = "";
+    for (int i = 0; i < n; i++)
+        res = res + alphabet[rand() % MAX];
+     
+    return res;
+}
+ 
+// Driver code
+int main()
+{
+   srand(time(NULL));
+   int n = 10;
+   cout << printRandomString(n);
+   return 0;
+}*/
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main()
+{
+    //for(int i=0;i<10;i++)
+    //cout<<rand()%1;
+    int y=10;
+    while(y--)
+    {
+        int t=rand()%10+1;
+        cout<<t<<endl;
+        while(t--)
+        {
+            int n=rand()%10+1;
+            cout<<n<<endl;
+            string name1="",name2="";
+            for(int i=0;i<n;i++)
+            name1+=to_string(rand()%2);
+            for(int i=0;i<n;i++)
+            name2+=to_string(rand()%2);
+            cout<<name1<<"\n"<<name2<<"\n";
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int ispalindrome(string name,int s,int e)
