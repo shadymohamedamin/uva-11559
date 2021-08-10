@@ -1,3 +1,45 @@
+   ll index_prime(ll n)
+{
+    ll idx=0;
+    ll temp=0;
+    ll first=2;
+    while(idx!=n)
+    {
+        int f=0;
+        for(ll i=2;i*i<=first;i++)
+        {
+            if(first%i==0)
+            {
+                f=1;
+                break;
+            }
+        }
+        if(f==0)
+        {
+            idx++;
+            temp=first;
+        }
+        first++;
+    }
+    return temp;
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    ll d=0,s1=temp2;
              while(temp2>0)
              {
