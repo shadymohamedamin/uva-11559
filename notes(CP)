@@ -1,4 +1,21 @@
-
+   ll d=0,s1=temp2;
+             while(temp2>0)
+             {
+                 d=temp2%10;
+                 temp1=temp1*10+d;
+                 temp2/=10;
+             }
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
 // CPP Program to generate random alphabets
 /*#include <bits/stdc++.h>
 using namespace std;
