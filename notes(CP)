@@ -1,4 +1,28 @@
-   ll index_prime(ll n)
+//////////
+dont do this
+ll visit[(int)(1e6)]={};
+bool cheat(ll mid)
+{
+   
+}
+
+
+// do this
+ll visit[(int)(1e6)];
+bool cheat(ll mid)
+{
+    memset(visit,0,sizeof(visit));
+}
+
+
+
+
+
+
+
+
+
+ll index_prime(ll n)
 {
     ll idx=0;
     ll temp=0;
