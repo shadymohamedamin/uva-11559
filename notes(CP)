@@ -1,3 +1,30 @@
+const double  EPS = 1e-6;
+int dcmp(double x, double y) {
+	if (fabs(x - y) < EPS)
+		return 0;
+	return (x < y ? -1 : 1);
+}
+/*                   وتزودوا فإن خير الزاد التقوى                    */
+/*       وما تدري نفس ماذا تکسب غدا وما تدري نفس باي ارض تموت      */
+
+
+
+
+
+   double x =(-1+(sqrt(1+8*n)))/2;
+    k=x;
+    if(x!=k)k++;
+
+
+
+
+
+
+
+
+
+
+
 //////////
 dont do this
 ll visit[(int)(1e6)]={};
