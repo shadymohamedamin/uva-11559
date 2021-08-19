@@ -1,3 +1,46 @@
+//prime
+void fast() {
+    ios_base::sync_with_stdio(false);
+    cout.tie(NULL);
+    cin.tie(NULL);
+}
+void Sieve(ll l,ll n){
+vector<bool>prime(n+1,1);
+    for (ll p = 2; p * p <= n; p++){
+        if (prime[p] == true){
+            for (ll i = p * p; i <= n; i += p)
+                prime[i] = false;
+        }
+    }
+    for (ll p = l; p <= n; p++)
+        if (prime[p])
+            cout << p << " ";
+}
+int main()
+{
+   ll l,r;
+   cin>>l>>r;
+   if(l>r) swap(l,r);
+   if(l==1) l++;
+   Sieve(l,r);
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const double  EPS = 1e-6;
 int dcmp(double x, double y) {
 	if (fabs(x - y) < EPS)
