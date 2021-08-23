@@ -1,3 +1,30 @@
+    cin>>n;
+    long long sum=0,mx=0;
+    for(long long i=0;i<n;i++)
+    {
+        long long x;
+        cin>>x;
+        sum+=x;
+        mx=max(mx,x);
+    }
+    cout<<(long long)max(mx,(long long)ceil(1.0*sum/(n-1)));
+    //focus that when i count numbers in sum ,it may be some negative values that decrease the sum so i will take the max between max number and sum 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #define Pi 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 
 
